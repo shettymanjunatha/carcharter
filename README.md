@@ -10,15 +10,17 @@ npm install -g @angular/cli
 
 npm i -g http-server
 
+Run `cd <project name>`
+
+Run `npm install`
+
 ```
 
 #### Run the json server:
 
 ```
 
-Run `cd carcharter/server`
-
-Run `json-server -p 3002 db.json`
+Run `cd server`
 
 Run `node index.js` # runs in 3000 server
 
@@ -28,10 +30,6 @@ Run `node index.js` # runs in 3000 server
 #### Development server
 
 ```
-
-Run `cd carcharter`
-
-Run `npm install`
 
 Run `ng serve` for a dev server. 
 
