@@ -1,0 +1,47 @@
+<form [formGroup]="carForm" (ngSubmit)="onSubmit(carForm)">
+    <div class="row">
+        <div class="col-4">
+            <div class="form-group">
+                <label for="name" class="mb-2">Brand</label>
+                <input type="text" id="Brand" name="Brand" class="form-control mb-3" formControlName="Brand" />
+
+                <div *ngIf="f['Brand'].touched && f['Brand'].invalid" class="alert alert-danger">
+                    <div *ngIf="f['Brand'].errors && f['Brand'].errors['required']">Brand is required.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-4">
+            <div class="form-group">
+                <label for="side" class="mb-2">Model</label>
+                <input type="text" id="Model" name="Model" class="form-control mb-3" formControlName="Model" />
+                <div *ngIf="f['Model'].touched && f['Model'].invalid" class="alert alert-danger" style="width: 400px">
+                    <div *ngIf="f['Model'].errors && f['Model'].errors['required']">Model is required.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-4">
+            <div class="form-group">
+                <label for="side" class="mb-2">Navigation</label>
+                <div class="radio-group">
+                    <input id="true" type="radio" value="true" name="Navigation" formControlName="Navigation">
+                    <label for="true">True</label>
+                    <input id="false" type="radio" class="radio-button" value="false" name="Navigation"
+                        formControlName="Navigation">
+                    <label for="false">False</label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-4">
+            <button class="btn btn-primary mt-3" type="submit" [disabled]="carForm.invalid">Add Car</button>
+        </div>
+    </div>
+</form>
