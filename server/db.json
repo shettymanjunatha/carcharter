@@ -1,0 +1,46 @@
+{
+  "Login": {
+    "Content": "JWT-TOKEN",
+    "Success": "200",
+    "Message": "Success",
+    "ResultCode": 200
+  },
+  "GetCars": [
+    {
+      "id": 1,
+      "Brand": "Mazda",
+      "Model": "RX-8",
+      "Navigation": "true"
+    },
+    {
+      "id": 2,
+      "Brand": "Honda",
+      "Model": "Civic",
+      "Navigation": "true"
+    },
+    {
+      "id": 3,
+      "Brand": "Pontiac",
+      "Model": "PX-1",
+      "Navigation": "true"
+    },
+    {
+      "id": 4,
+      "Brand": "Dodge",
+      "Model": "Dakota",
+      "Navigation": "false"
+    },
+    {
+      "id": 5,
+      "Brand": "MINI",
+      "Model": "Cooper",
+      "Navigation": "false"
+    }
+  ],
+  "AddCar": {
+    "id": 6,
+    "Brand": "d",
+    "Model": "d",
+    "Navigation": "true"
+  }
+}

@@ -11,6 +11,7 @@ import { metaReducers, reducers } from './store/reducers';
 import { EffectsModule } from '@ngrx/effects';
 import { SharedModule } from './shared/shared.module';
 import { CoreModule } from './core/core.module';
+import { CarModule } from './car/car.module';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { CoreModule } from './core/core.module';
     AppRoutingModule, 
     CoreModule,
     SharedModule,
+    CarModule,
     EffectsModule.forRoot([]),
     StoreModule.forRoot(reducers, {
       metaReducers, runtimeChecks: {
@@ -30,8 +32,6 @@ import { CoreModule } from './core/core.module';
     }),
     !environment.production ? StoreDevtoolsModule.instrument({ maxAge: 25 }) : []
   ],
-  
-  
   bootstrap: [AppComponent]
 })
 export class AppModule { }

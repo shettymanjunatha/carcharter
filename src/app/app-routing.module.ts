@@ -10,7 +10,16 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   {
     path: 'cars',
-    loadChildren: () => import('./car/car.module').then(m => m.CarModule)
+    component: CarsListComponent,
+    resolve: {
+      courses: CarResolver
+    },
+    pathMatch: 'full'
+  },
+  {
+    path: 'car',
+    component: AddCarComponent,
+    pathMatch: 'full'
   },
   { path: '**', redirectTo: 'login' }];
 

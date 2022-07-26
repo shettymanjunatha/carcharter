@@ -10,7 +10,7 @@ import { Car } from '../model/car.model';
 @Injectable()
 export class CarEffects {
 
-    constructor(private carService: CarService, private actions$: Actions, private router: Router) {}
+  constructor(private carService: CarService, private actions$: Actions, private router: Router) {}
 
   loadCars$ = createEffect(() =>
     this.actions$.pipe(
@@ -26,7 +26,7 @@ export class CarEffects {
     this.actions$.pipe(
       ofType(carActionTypes.addCarSuccess),
       concatMap((action) => this.carService.addCar(action.car)),
-      tap(() => this.router.navigateByUrl('/cars/list'))
+      tap(() => this.router.navigateByUrl('/cars'))
     ),
     {dispatch: false}
   );

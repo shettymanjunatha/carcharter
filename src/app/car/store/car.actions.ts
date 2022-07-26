@@ -1,5 +1,4 @@
 import { createAction, props } from '@ngrx/store';
-import { Update } from '@ngrx/entity';
 import { Car } from '../model/car.model';
 
 export enum CarActionTypes {
@@ -17,12 +16,10 @@ export const loadCarSuccess = createAction(
     props<{ car: Car[] }>()
 );
 
-
 export const addCarSuccess = createAction(
     CarActionTypes.ADD_CAR_SUCCESS,
     props<{ car: Car }>()
 );
-
 
 export const carActionTypes = {
     loadCars,

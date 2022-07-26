@@ -1,5 +1,6 @@
 export interface LoginResponse {
-    Content: string;
+    id?: number;
+    Content?: string;
     Success?: boolean;
     Message?: string
     ResultCode?: string;

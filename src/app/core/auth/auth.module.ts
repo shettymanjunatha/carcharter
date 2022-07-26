@@ -7,7 +7,6 @@ import { StoreModule } from '@ngrx/store';
 import { LoginEffects } from './store/login.effects';
 import { loginReducer } from './store/login.reducers';
 
-
 @NgModule({
   declarations: [LoginComponent],
   exports: [LoginComponent],

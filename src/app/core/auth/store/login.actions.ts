@@ -1,6 +1,4 @@
 import { createAction, props } from '@ngrx/store';
-import { Update } from '@ngrx/entity';
-import { LoginResponse } from '../model/login-response.model';
 
 export enum AuthActionTypes {
     AUTH_LOGIN = '[Auth] Login',
@@ -18,12 +16,10 @@ export const loadLoginSuccess = createAction(
     props<{ user: any }>()
 );
 
-
 export const loadLoginFailure = createAction(
     AuthActionTypes.AUTH_LOGIN_FAILURE,
     props<{ message: string }>()
 );
-
 
 export const loginActionTypes = {
     loadLogin,

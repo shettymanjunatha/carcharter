@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {
-  Router, Resolve,
+  Resolve,
   RouterStateSnapshot,
   ActivatedRouteSnapshot
 } from '@angular/router';
@@ -10,12 +10,13 @@ import { AppState } from '../store/reducers';
 import { loadCars } from './store/car.actions';
 
 import { areCarsLoaded } from './store/cars.selectors';
-import {filter, finalize, first, tap} from 'rxjs/operators';
+import {filter, first, tap} from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CarResolver implements Resolve<boolean> {
+
   constructor(private store: Store<AppState>) { }
 
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<boolean> {

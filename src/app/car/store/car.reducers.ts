@@ -3,7 +3,6 @@ import { EntityState, EntityAdapter, createEntityAdapter } from '@ngrx/entity';
 import { createReducer, on } from '@ngrx/store';
 import { carActionTypes } from './car.actions';
 
-
 export interface CarState extends EntityState<Car> {
     carsLoaded: boolean;
 }
@@ -18,7 +17,6 @@ export const carsReducer = createReducer(
     initialState,
 
     on(carActionTypes.loadCarSuccess, (state, action) => {
-        console.log("Action ",action.car)
         return adapter.addMany(
             action.car,
             { ...state, carsLoaded: true }

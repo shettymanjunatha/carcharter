@@ -4,7 +4,6 @@ import { Observable } from 'rxjs';
 import { AppState } from 'src/app/store/reducers';
 import { Car } from '../../model/car.model';
 import { CarService } from '../../services/car.service';
-import { loadCars } from '../../store/car.actions';
 import { getAllCars } from '../../store/cars.selectors';
 
 @Component({
