@@ -15,7 +15,7 @@ export const areCarsLoaded = createSelector(
 );
 
 
-export const totalCourse = createSelector(
+export const totalCars = createSelector(
     carFeatureSelector,
     selectTotal
 );
