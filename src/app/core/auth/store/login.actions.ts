@@ -1,9 +1,9 @@
 import { createAction, props } from '@ngrx/store';
 
 export enum AuthActionTypes {
-    AUTH_LOGIN = '[Auth] Login',
-    AUTH_LOGIN_SUCCESS = '[Auth] Login Loaded SUCCESS',
-    AUTH_LOGIN_FAILURE = '[Auth] Login FAILURE',
+    AUTH_LOGIN = '[Login Page] Login',
+    AUTH_LOGIN_SUCCESS = '[Auth API] Login Loaded Success',
+    AUTH_LOGIN_FAILURE = '[Auth API] Login Failure',
 }
 
 export const loadLogin = createAction(

@@ -1,4 +1,4 @@
-import { CarState } from './car.reducers';
+import { CarState, selectTotal } from './car.reducers';
 import { createSelector, createFeatureSelector } from '@ngrx/store';
 import { selectAll } from './car.reducers';
 
@@ -13,3 +13,16 @@ export const areCarsLoaded = createSelector(
     carFeatureSelector,
     state => state.carsLoaded
 );
+
+
+export const totalCourse = createSelector(
+    carFeatureSelector,
+    selectTotal
+);
+
+export const getCarById = (id: number) => 
+    (state: CarState) => state.entities[id];
+
+    
+export const getCarEntityById = (id: number) => 
+    createSelector(carFeatureSelector, getCarById(id));

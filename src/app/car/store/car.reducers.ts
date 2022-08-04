@@ -28,4 +28,4 @@ export const carsReducer = createReducer(
     })
 );
 
-export const { selectAll, selectIds } = adapter.getSelectors();
+export const { selectAll, selectEntities, selectIds, selectTotal } = adapter.getSelectors();
