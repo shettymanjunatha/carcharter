@@ -38,9 +38,9 @@
     }
   ],
   "AddCar": {
-    "id": 6,
-    "Brand": "d",
-    "Model": "d",
+    "id": 8,
+    "Brand": "Maruthi",
+    "Model": "123",
     "Navigation": "true"
   }
 }

@@ -2,8 +2,8 @@ import { createAction, props } from '@ngrx/store';
 import { Car } from '../model/car.model';
 
 export enum CarActionTypes {
-    LOAD_CARS = '[Car Page] Load Cars via Service',
-    LOAD_CARS_SUCCESS = '[Car API] Cars Loaded Success',
+    LOAD_CARS = '[Cars List Page] Load Cars via Service',
+    LOAD_CARS_SUCCESS = '[Cars API] Cars Loaded Success',
     ADD_CAR_SUCCESS = '[Car Add Page] Cars Added Success',
 }
 
