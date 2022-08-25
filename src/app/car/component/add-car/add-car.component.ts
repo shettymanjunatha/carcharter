@@ -6,7 +6,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 import { Car } from '../../model/car.model';
 import { addCarSuccess } from '../../store/car.actions';
-import { getAllCars } from '../../store/cars.selectors';
+import { getAllCars, totalCars } from '../../store/cars.selectors';
 
 @Component({
   selector: 'app-add-car',
@@ -27,8 +27,8 @@ export class AddCarComponent implements OnInit {
   constructor(private store: Store<AppState>, private fb: FormBuilder) { }
 
   ngOnInit() {
-    this.store.select(getAllCars).subscribe((carList) => {
-      this.count = carList.length;
+    this.store.select(totalCars).subscribe((count) => {
+      this.count = count;
     });
   }
 
@@ -50,5 +50,6 @@ export class AddCarComponent implements OnInit {
     this.store.dispatch(addCarSuccess({ car }));
 
   }
+
 
 }

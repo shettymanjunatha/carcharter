@@ -1,8 +1,8 @@
+import { environment } from './../../../environments/environment';
 import {
   ActionReducerMap,
   MetaReducer
 } from '@ngrx/store';
-import { environment } from 'src/environments/environment';
 
 export interface AppState {
 

@@ -58,3 +58,28 @@ Run `npm run prod-build`
 Navigate to `http://127.0.0.1:9000`.
 
 ```
+
+--skip-tests
+
+
+
+ng generate store State --root --state-path store --module app.module.ts
+                        CREATE src/app/store/index.ts (360 bytes)
+                        UPDATE src/app/app.module.ts (727 bytes)
+
+
+
+
+
+ng generate feature user/store/User -m user/user.module.ts 
+
+                    CREATE src/app/user/store/user.actions.ts (329 bytes)
+                    CREATE src/app/user/store/user.reducer.spec.ts (326 bytes)
+                    CREATE src/app/user/store/user.reducer.ts (443 bytes)
+                    CREATE src/app/user/store/user.effects.spec.ts (572 bytes)
+                    CREATE src/app/user/store/user.effects.ts (764 bytes)
+                    CREATE src/app/user/store/user.selectors.spec.ts (304 bytes)
+                    CREATE src/app/user/store/user.selectors.ts (213 bytes)
+                    UPDATE src/app/user/user.module.ts (909 bytes)
+
+
